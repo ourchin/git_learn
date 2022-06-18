@@ -1,0 +1,14 @@
+分布式管理（本地代码版本管理到上传远程仓库）               |       集中式管理（主服务器出错危害大）
+github Gitee（广域网）  gitlab（局域网）                |        svn
+  
+
+远程仓库 ——本地仓库——暂存区——工作区（代码区）
+
+
+github团队内协作共同开发 
+项目创建者给开发权限  项目settings——collaborators——Manage access  addpeople(账号) ——邀请函
+参加者  登录github  ——复制邀请函搜索—— 同意
+
+github跨团队协作
+项目  参与 fork   comimit change   Pull reguest —— New pull request——create Pull request
+        创建者  Pull reguest  好 ——>Merge pull request
