@@ -1,0 +1,36 @@
+——git基础——
+git config --global user.name 用户名 	设置用户名  tao
+git config --global user.email 邮箱		设置用户签名  ttbz@126.com 
+
+						//在用户目录下的.gitconfig可以查看配置信息，为本地信息
+
+git init        	初始化本地库
+git status 		查看本地库状态
+git add	 		添加到暂存区			//将未追踪的变为追踪 /将修改变为追踪
+git rm --cached  <file> 		把暂存区文件删除
+
+git commit -m "日志信息" 文件名		提交到本地库
+git  reflog		查看历史记录     显示版本号 xx 日志信息 //   git log     （查看详细信息）
+git reset --hard 版本号		版本穿梭 			head指向当前分支版本
+
+
+——git 分支——
+
+git  brance  分支名		创建分支
+git brance -v			查看分支
+git checkout 分支名		切换分支
+git merge 分支名		把指定的分支合并到当前分支上
+	//合并冲突：两处都修改了 手动合并保留需要的 谨慎  在 add  commit ， 在commit的时候不加文件名
+
+——git远程库——
+
+git remote -v					查看当前所有远程地址别名
+git remote add 别名 远程地址  		起别名
+git push 别名 分支				将本地库上传到远程仓库
+git pull	 远程库地址别名 远程分支名	拉取远程库代码并且与当前本地分支直接合并
+git clone  远程地址				将远程仓库克隆到本地
+
+
+——ssh免密登录——
+ssh-keygen -t rsa -C xx@126.com
+把.ssh 中公钥给github用户的SSH
